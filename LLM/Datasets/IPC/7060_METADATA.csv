@@ -1,0 +1,11 @@
+VariableName,VariableCode,Type_Of_Variable,Unit_Of_Measure,Scaling_Factor,Aggregation_Type,Weighing_Varible_ID,Weighing_Variable_Name,Long_Description
+Country,Country,Key Identifier,,0,,,,Country
+State lgd code,StateCode,Key Identifier,,0,,,,State LGD Code
+State,StateName,Key Identifier,,0,,,,State
+Crime head ipc ( indian penal code ) category,D7060_3,Key Identifier,"",0,,,,Crime head Category under IPC crimes
+Crime head ipc ( indian penal code ) sub-category,D7060_4,Key Identifier,"",0,,,,Crime head Sub-category under IPC crimes
+Yearcode,YearCode,Key Identifier,"",0,,,,YearCode
+Year,Year,Key Identifier,"",0,,,,Year
+Incidence of ipc ( indian penal code ) crimes,I7060_5,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Incidence of crimes reported under Indian Penal Code (IPC).
+Victims of ipc ( indian penal code ) crimes,I7060_6,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Victims of crimes
+Ipc ( indian penal code ) crime rate per lakh person,I7060_7,Numeric Variable,Per Lakh (100000),1,weighted avg,WeighingRatio_Percentage_TotalPopulation,Total Population from Census,Rate of crime is the number of crime reported per lakh person in the target population; calculation of crime rate in respect of offences related to crime against women are done using the female population

@@ -1,0 +1,11 @@
+VariableName,VariableCode,Type_Of_Variable,Unit_Of_Measure,Scaling_Factor,Aggregation_Type,Weighing_Varible_ID,Weighing_Variable_Name,Long_Description
+Country,Country,Key Identifier,,0,,,,Country
+State lgd code,StateCode,Key Identifier,,0,,,,State LGD Code
+State,StateName,Key Identifier,,0,,,,State
+Crime head special & local laws (sll) category,D7061_3,Key Identifier,"",0,,,,Crime head Category under Special & Local Laws (SLL) crimes
+Crime head special & local laws (sll) sub-category,D7061_4,Key Identifier,"",0,,,,Crime head Sub-category Special & Local Laws crimes
+Yearcode,YearCode,Key Identifier,"",0,,,,YearCode
+Year,Year,Key Identifier,"",0,,,,Year
+Incidence of special & local laws (sll) crimes,I7061_5,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Incidence of crimes reported under Special & Local Laws (SLL) Crime
+Victims of special & local laws (sll) crimes,I7061_6,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Victims of crimes
+Special & local laws (sll) crime rate,I7061_7,Numeric Variable,Ratio,1,weighted avg,WeighingRatio_Percentage_TotalPopulation,Total Population from Census,Rate of crime

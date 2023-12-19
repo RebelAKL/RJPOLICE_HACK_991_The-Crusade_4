@@ -1,0 +1,23 @@
+VariableName,VariableCode,Type_Of_Variable,Unit_Of_Measure,Scaling_Factor,Aggregation_Type,Weighing_Varible_ID,Weighing_Variable_Name,Long_Description
+Country,Country,Key Identifier,,0,,,,Country
+State lgd code,StateCode,Key Identifier,,0,,,,State LGD Code
+State,StateName,Key Identifier,,0,,,,State
+Yearcode,YearCode,Key Identifier,"",0,"","","",YearCode
+Year,Year,Key Identifier,"",0,"","","",Year
+Cognizable crimes reported by ipc,I7042_3,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cognizable crimes reported IPC (Indian Penal Code). A cognizable offence or case is defined as the one which an officer in-charge of a police station may investigate without the order of a magistrate and effect arrest without warrant.
+Registered murder cases,I7042_4,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Registered murder cases
+Registered cases of offence against state,I7042_5,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Registered cases of offence against state
+Cases reported under the prevention of corruption act and related sections of ipc,I7042_6,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases reported under the Prevention of Corruption Act and related sections of IPC
+Value of property stolen,I7042_7,Numeric Variable,INR ( Indian Rupees ),10000000,sum,WeighingRatio_TotalPopulation,Total Population from Census,Value of property stolen in crore
+Value of property recovered,I7042_8,Numeric Variable,INR ( Indian Rupees ),10000000,sum,WeighingRatio_TotalPopulation,Total Population from Census,Value of property recovered in crore
+Cases registered by railway protection force,I7042_9,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases registered by Railway Protection Force
+Registered cases of crime or atrocities against scheduled castes (scs),I7042_10,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Registered cases of crime or atrocities against Scheduled Castes (SCs)
+Registered cases of crime or atrocities against scheduled tribes (sts),I7042_11,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Registered cases of crime or atrocities against Scheduled Tribes
+Cognizable crimes registered under sll (special & local laws).,I7042_12,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cognizable crimes registered under SLL (Special & Local Laws). A cognizable offence or case is defined as the one which an officer in-charge of a police station may investigate without the order of a magistrate and effect arrest without warrant.
+Cognizable crimes registered under ipc (indian penal code) and sll (special & local laws),I7042_13,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cognizable crimes registered under IPC (Indian Penal Code) and SLL (Special & Local Laws). A cognizable offence or case is defined as the one which an officer in-charge of a police station may investigate without the order of a magistrate and effect arrest without warrant.
+Cases registered under crime against women (including both ipc and sll (special & local laws crimes),I7042_14,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases registered under crime against women including both IPC and SLL
+Cases of crime against foreigners,I7042_15,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases of crime against foreigners.
+Registered cyber-crime cases,I7042_16,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Registered cyber-crime cases
+Cases registered under economic offences,I7042_17,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases registered under economic offences.
+Cases registered under environment related offences,I7042_18,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases registered under environment related offences.
+Cases registered under ipc and sll (special & local laws) in which juveniles were apprehended.,I7042_19,Numeric Variable,Number,1,sum,WeighingRatio_TotalPopulation,Total Population from Census,Cases registered under IPC (Indian Penal Code) and SLL (Special & Local Laws) in which juveniles were apprehended.
