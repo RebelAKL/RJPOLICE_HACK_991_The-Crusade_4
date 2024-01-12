@@ -44,15 +44,23 @@ def get_conversational_chain():
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
     return chain
 
-def user_input(user_question):
+def user_input(user_question, conversational_chain, conversation_history):
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     new_db = FAISS.load_local("faiss_index", embeddings)
     docs = new_db.similarity_search(user_question)
     
-    chain = get_conversational_chain()
-    response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
+    response = conversational_chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
+    conversation_history.append({"User": user_question, "AI": response["output_text"]})
     
     st.write("Reply:", response["output_text"])
+    display_conversation_history(conversation_history)
+
+def display_conversation_history(conversation_history):
+    st.subheader("Conversation History:")
+    for dialogue in conversation_history:
+        st.write(f"User: {dialogue['User']}")
+        st.write(f"AI: {dialogue['AI']}")
+        st.write("---")
 
 def main():
     st.set_page_config("General Search")
@@ -60,8 +68,11 @@ def main():
 
     user_question = st.text_input("How can I help you!!")
 
+    conversation_history = st.session_state.get("conversation_history", [])
     if user_question:
-        user_input(user_question)
+        conversational_chain = get_conversational_chain()
+        user_input(user_question, conversational_chain, conversation_history)
+        st.session_state.conversation_history = conversation_history
 
     with st.sidebar:
         st.title("Menu:")
