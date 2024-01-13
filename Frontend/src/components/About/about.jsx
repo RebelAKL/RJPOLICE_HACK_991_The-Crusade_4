@@ -1,6 +1,6 @@
  import React from "react";
 import "./about.css";
-// import { img } from "../../assets/images";
+import { policeman } from "../../assets/images";
 import { motion } from "framer-motion";
 import { TitleText } from "../Tracks_new/CustomTexts";
 import { staggerContainer } from "../Tracks_new/motion";
@@ -55,7 +55,7 @@ const AboutSection = () => {
         style={{ width: "35%" }}
       >
         <img
-          // src={img} // Replace with your actual image source
+          src={policeman} // Replace with your actual image source
           alt="About Image"
           className="w-full h-full object-cover"
         />

@@ -43,7 +43,7 @@ const Card = ({ props }) => {
       <div className="relative overflow-visible -translate-y-2/4">
         <img
           src={props.image}
-          alt="speakers"
+          alt="Members"
           className="object-cover w-40 rounded-full lg:w-42 h-44"
         />
       </div>

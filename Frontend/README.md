@@ -1,4 +1,4 @@
- # React + Vite + Tailwind + Framer-Motion + Three.js
+ # React + Vite + Tailwind + Framer-Motion 
 
 ## Project Setup
 
@@ -26,4 +26,4 @@
 - **Vite:** A fast development server and bundler.
 - **Tailwind CSS:** A utility-first CSS framework.
 - **Framer Motion:** A motion library for React.
-- **Three.js:** A 3D library for the web.
+

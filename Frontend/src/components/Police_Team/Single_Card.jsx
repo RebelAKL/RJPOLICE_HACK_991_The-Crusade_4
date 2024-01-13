@@ -30,7 +30,7 @@ const FlippingCard = ({ data, isFlipped, onCardClick }) => {
             <img
               className='h-3/4 w-full rounded-full'
               src={back_demo}
-              alt="organizerImg"
+              alt="Img"
             />
           </picture>
         </div>

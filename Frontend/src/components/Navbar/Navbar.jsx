@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-// import { headerimg, speclogo } from '../../assets/images';
+import { crusadelogo } from '../../assets/images';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -18,12 +18,12 @@ const Navbar = () => {
       <picture style={{width:"20%"}}>
                  <img
                   className=" flex w-16 md:w-32 md:mr-4"
-                  src= {''}
+                  src= {crusadelogo}
                   alt="logo"
                 />
               </picture>
       <NavLink to ="/" >
-      <h1 className="text-white font-extrabold sm:font-bold text-md ml-4 sm:text-2xl sm:flex sm:ml-24 md:text-3xl lg:text-4xl xl:text-4xl">CRUSADE</h1>
+      {/* <h1 className="text-white font-extrabold sm:font-bold text-md ml-4 sm:text-2xl sm:flex sm:ml-24 md:text-3xl lg:text-4xl xl:text-4xl">CRUSADE</h1> */}
 </NavLink>
 <div
    className='flex ml-auto mr-8 h-[2rem] w-[6rem] sm:h-auto sm:w-64 lg:mr-48 md:w-[8rem] lg:w-64 xl:w-64'

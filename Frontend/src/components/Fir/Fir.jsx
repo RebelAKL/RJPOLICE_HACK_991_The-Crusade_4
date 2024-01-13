@@ -20,15 +20,16 @@ const Fir = () => {
           title={
             <>
               <div className="container mx-auto px-4 flex justify-center ">
-              </div>
+              
               <div className="text-3xl lg:text-5xl  text-[#DEECE4] my-3 lg:my-4 font-[Inter] ">
-                FIR
+              Recent FIR
               <form className="container p-2 px-5 d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             </div>
-
+            </div>
+              
             </>
           }
           textStyles="text-center"
@@ -36,9 +37,9 @@ const Fir = () => {
       </motion.div>
       <div className="fir">
       <div className="flex justify-center">
-              <div className="text-3xl lg:text-5xl  text-[#DEECE4] my-3 lg:my-4 font-[Inter] ">
+              {/* <div className="text-3xl lg:text-5xl  text-[#DEECE4] my-3 lg:my-4 font-[Inter] ">
                 Recent FIR
-              </div>
+              </div> */}
               </div>
       <div className=" block grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div className="second p-4 mx-5">

@@ -10,7 +10,7 @@ import timelineElements from './timelineElements';
 import { VerticalTimeline,VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import "react-vertical-timeline-component/style.min.css";
-import { bg3, people, register, result, work } from '../../assets/images';
+import {  people, register, result} from '../../assets/images';
 
 function Timeline() {
 
