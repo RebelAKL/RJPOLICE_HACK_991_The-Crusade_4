@@ -9,8 +9,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Sponser" element={<Sponser />} />
-        <Route path="/Pirzenav" element={<Pirzenav />} />
+        {/* <Route path="/Sponser" element={<Sponser />} />
+        <Route path="/Pirzenav" element={<Pirzenav />} /> */}
       </Routes>
     </Router>
   );

@@ -1,4 +1,4 @@
-// import { phy_demo, phy_l_demo } from "../../assets/images";
+// import { img } from "../../assets/images";
 
 export const  tabData = [
     [{
@@ -17,14 +17,14 @@ export const  tabData = [
         prize_amt: "50,000",
       }],
       [{
-        heading: "Finance and Payments        ",
+        heading: "Punishments",
         content: "Develop a fintech project that enhances financial inclusivity, security, or efficiency aiming toeshape the future of financial transactions and empower individuals.        ",
         img1: "src/assets/images/ai.jpeg.jpg",
         img2: "src/assets/images/ai3.jpeg",
         prize_amt: "30,000",
       }],
       [{
-        heading: " Gaming and Entertainment ",
+        heading: "Court Details",
         content: "Create an immersive gaming or entertainment experience using VR, AR, or blockchain for innovation in storytelling and interaction.        ",
         img1: "src/assets/images/ai.jpeg.jpg",
         img2: "src/assets/images/ai3.jpeg",

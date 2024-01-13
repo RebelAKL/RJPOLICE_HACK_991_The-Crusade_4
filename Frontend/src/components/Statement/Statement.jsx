@@ -79,12 +79,86 @@ const Statement = () => {
   <option key={elements.PoliceStation}>{elements.PoliceStation}</option>
 );
 
-const SearchType=()=>{
+let SearchType=[
+  {
+    "source": {
+        "name": "Search Type"
+        },
+        "PoliceStation": "Police Station(optional)",
+        
+        },
+  {
+  "source": {
+      "name": "Text Search"
+      },
+      "PoliceStation": "lorem",
+      
+      },
+  {
+  "source": {
+      "name": "Image Search"
+      },
+      "PoliceStation": "lorem",
+      },
+  {
+  "source": {
+        "name": "Voice Search"
+        }, 
+        "PoliceStation": "lorem",
+        },
+  
+      ]
+  const Search = SearchType.map((elements) =>
+    <option key={elements.source.name}>{elements.source.name}</option>
+    );
+
+  const [selected, setSelected] = React.useState(""); 
+  const changeSelectOptionHandler = (event) => { 
+    setSelected(event.target.value); 
+  }; 
+
+  const ImageSearch =()=> {
+    return(
       <div class="mb-3">
-        <label for="formFile" class="form-label">Default file input example</label>
-        <input class="form-control" type="file" id="formFile"/>
+        <label for="formFile" className="form-label text-slate-500 flex justify-center ">Upload the png,jpg or jpeg formate file</label>
+        <input className="form-control" type="file" id="formFile"/>
     </div>
+    )
+  }
+  const TextSearch =()=> {
+    return(
+      <input placeholder="Statement/Scenario"
+            type="text"
+            className="form-control mx-1"
+            id="Statment"
+          />
+    )
+  }
+
+  const VoiceSearch =()=> {
+    return(
+      console.log("hi")
+    )
+  }
+
+  const SearchInfo=()=>{
+  if (selected === "Text Search") { 
+    return(
+      TextSearch()
+      )
+    } else if (selected === "Image Search") { 
+      return(
+      ImageSearch()
+
+    )
+  } else if (selected === "Voice Search") { 
+    return(
+      VoiceSearch()
+
+    )
+  } 
 }
+
 
   return (
     <div className="container mx-auto my-8">
@@ -104,12 +178,11 @@ const SearchType=()=>{
           textStyles="text-center"
         />
       <form>
-        <div className="m-3 p-2 d-flex justify-center ">
-          <input placeholder="Statement/Scenario"
-            type="text"
-            className="form-control mx-1"
-            id="Statment"
-          />
+        <div className="m-3 py-2 px-5 d-flex justify-center ">
+          
+          <select onChange={changeSelectOptionHandler} className="form-select mx-1" aria-label="Default select example"> 
+          {Search}
+          </select> 
           <select className="form-select" aria-label="Default select example">
           {SelectState}
           </select>
@@ -120,12 +193,14 @@ const SearchType=()=>{
           </select>
           
           <button type="submit" className="btn btn-primary ">
-          Submit
+          Process
         </button>
-        
         </div>
+        <div className="m-3 py-2 px-5 d-flex justify-center "> 
+          <SearchInfo/>
+          </div>
       </form>
-
+      
 
     </div>
   );

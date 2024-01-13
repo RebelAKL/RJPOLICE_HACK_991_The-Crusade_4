@@ -4,7 +4,7 @@ import Hero from "../components/Hero/hero";
 import AboutSection from "../components/About/about";
 import Faqs from "../components/Faq/faq";
 import Footer from "../components/Footer/footer";
-import Challenges from "../components/Challenges/Challenges";
+import Challenges from "../components/CaseInfo/Challenges";
 import TeamMembers from "../components/Team_Members/team";
 import Prizes from "../components/prizesnav/prizesmain/prize";
 import Fir from "../components/Fir/Fir";
@@ -57,7 +57,7 @@ function Home() {
           <Details />
           {/* <Procedure /> */}
           <Carousel />
-          <Challenges />
+          {/* <Challenges /> */}
           <Police_team />
 
           <TeamMembers />
