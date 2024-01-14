@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import "slick-carousel/slick/slick.css";
 import { motion } from "framer-motion";
-import { TitleText } from "../Tracks_new/CustomTexts.jsx";
-import { staggerContainer } from "../Tracks_new/motion.js";
-import styles from "../Tracks_new/style.js";
+import { TitleText } from "../Tracks/CustomTexts.jsx";
+import { staggerContainer } from "../Tracks/motion.js";
+import styles from "../Tracks/style.js";
 import "slick-carousel/slick/slick-theme.css";
 import team from "./teamdata.json";
 
@@ -41,7 +41,7 @@ const TeamMembers = () => {
         />
       </motion.div>
       <Section>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-x-16 md:gap-y-10 lg:grid-cols-3 m-2  md:max-w-[85vw] lg:max-w-[80vw] mx-auto">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-x-16 md:gap-y-10 lg:grid-cols-4 m-2  md:max-w-[85vw] lg:max-w-[80vw] mx-auto">
           {team.map((team, index) => {
             return <Card props={team} key={index} />;
           })}

@@ -2,9 +2,9 @@ import React from "react";
 import { challengesData } from "./challengesData";
 
 import { motion } from "framer-motion";
-import { TitleText } from "../Tracks_new/CustomTexts";
-import { staggerContainer } from "../Tracks_new/motion";
-import styles from "../Tracks_new/style";
+import { TitleText } from "../Tracks/CustomTexts";
+import { staggerContainer } from "../Tracks/motion";
+import styles from "../Tracks/style";
 
 const Challenges = () => {
   return (

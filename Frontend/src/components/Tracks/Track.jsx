@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { exploreWorlds } from "./data";
-import { staggerContainer } from "./motion";
-import { TitleText } from "./CustomTexts";
+import { exploreWorlds } from "./data.js";
+import { staggerContainer } from "./motion.js";
+import { TitleText } from "./CustomTexts.jsx";
 import ExploreCard from "./ExploreCard.jsx";
-import styles from "./style";
+import styles from "./style.js";
 
 const Explore = () => {
   const [active, setActive] = useState(null);

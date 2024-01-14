@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { TitleText } from "../Tracks_new/CustomTexts";
+import { TitleText } from "../Tracks/CustomTexts";
 import "./style.css";
 import { motion } from "framer-motion";
 import { SearchDetails } from './SearchDetails';
 import Design_copmponent from '../design_componet/opacity';
-import { staggerContainer } from "../Tracks_new/motion";
-import styles from "../Tracks_new/style";
+import { staggerContainer } from "../Tracks/motion";
+import styles from "../Tracks/style";
 
 const Statement = () => {
   let articles=[

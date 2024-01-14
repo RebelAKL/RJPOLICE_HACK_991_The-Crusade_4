@@ -10,9 +10,9 @@ import {
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import { TitleText } from "../Tracks_new/CustomTexts";
-import { staggerContainer } from "../Tracks_new/motion";
-import styles from "../Tracks_new/style";
+import { TitleText } from "../Tracks/CustomTexts";
+import { staggerContainer } from "../Tracks/motion";
+import styles from "../Tracks/style";
 // import { logo } from "../../assets/images";
 
 export default function Footer() {
