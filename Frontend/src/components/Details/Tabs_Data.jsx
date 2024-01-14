@@ -1,33 +1,40 @@
-// import { img } from "../../assets/images";
+import { details1,
+  details2,
+  punishment1,
+  punishment2,
+  court1,
+  court2,
+  section1,
+  section2, } from "../../assets/images";
 
 export const  tabData = [
     [{
         heading: "General Details",
         content: "Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ullam voluptas consequatur nihil nobis, incidunt vel adipisci optio laborum repudiandae atque eligendi commodi similique laudantium et numquam iste? Placeat, quasi?",
-        img1: "src/assets/images/ai.jpeg.jpg",
-        img2: "src/assets/images/ai3.jpeg",
+        img1: details1,
+        img2: details2,
         Cognizable: "Non Cognizable",
         Bailable: "Bailable",
       }],
       [{
         heading: "Suggested Sections and acts available",
-        content: "Craft an AI solution that addresses a real-world problem, emphasizing its potential impact on industries such as healthcare, education, or finance.        ",
-        img1: "src/assets/images/ai.jpeg.jpg",
-        img2: "src/assets/images/ai3.jpeg",
+        content: "Corrupti ullam voluptas consequatur nihil nobis, incidunt vel adipisci optio laborum repudiandae atque eligendi commodi similique laudantium et numquam iste? Placeat, quasi?  ",
+        img1: section1,
+        img2: section2,
         prize_amt: "50,000",
       }],
       [{
         heading: "Punishments",
-        content: "Develop a fintech project that enhances financial inclusivity, security, or efficiency aiming toeshape the future of financial transactions and empower individuals.        ",
-        img1: "src/assets/images/ai.jpeg.jpg",
-        img2: "src/assets/images/ai3.jpeg",
+        content: "Corrupti ullam voluptas consequatur nihil nobis, incidunt vel adipisci optio laborum repudiandae atque eligendi commodi similique laudantium et numquam iste? Placeat, quasi?   ",
+        img1: punishment1,
+        img2: punishment2,
         prize_amt: "30,000",
       }],
       [{
         heading: "Court Details",
-        content: "Create an immersive gaming or entertainment experience using VR, AR, or blockchain for innovation in storytelling and interaction.        ",
-        img1: "src/assets/images/ai.jpeg.jpg",
-        img2: "src/assets/images/ai3.jpeg",
+        content: "Corrupti ullam voluptas consequatur nihil nobis, incidunt vel adipisci optio laborum repudiandae atque eligendi commodi similique laudantium et numquam iste? Placeat, quasi? ",
+        img1: court2,
+        img2: court1,
         prize_amt: "30,000",
       }],
       

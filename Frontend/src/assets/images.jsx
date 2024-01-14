@@ -22,6 +22,15 @@ import chaitanya from "../assets/images/Chaitanya.jpg"
 import ananay from "../assets/images/ananay.jpg"
 import vishesh from "../assets/images/vishesh.jpg"
 
+import court1 from "../assets/images/court1.png"
+import court2 from "../assets/images/court2.png"
+import section1 from "../assets/images/section1.png"
+import section2 from "../assets/images/section2.png"
+import details1 from "../assets/images/details1.png"
+import details2 from "../assets/images/details2.png"
+import punishment1 from "../assets/images/punishment1.png"
+import punishment2 from "../assets/images/punishment2.png"
+
 
 export {
   policeman,
@@ -46,4 +55,12 @@ export {
   ananay,
   chaitanya,
   vishesh,
+  details1,
+  details2,
+  punishment1,
+  punishment2,
+  court1,
+  court2,
+  section1,
+  section2,
 };
