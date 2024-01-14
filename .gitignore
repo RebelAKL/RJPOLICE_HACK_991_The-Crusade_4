@@ -9,12 +9,13 @@ __pycache__
 /Frontend/.pnp
 /Frontend/.gitignore
 .pnp.js
+# /Frontend/src/components/Tracks/CustomTests.jsx
 
 # testing
 /Frontend/coverage
 
 # production
-/Frontend/build
+# /Frontend/build
 
 # misc
 .DS_Store

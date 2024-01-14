@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 
 // import { motion } from "framer-motion";
-import { textContainer, textVariant2 } from "../Tracks/motion";
+// import { textContainer, textVariant2 } from "../Tracks/motion";
 import React, { Component } from "react";
 // import { TitleText } from "../Tracks/CustomTexts";
 import "./style.css";
@@ -12,16 +12,16 @@ import { staggerContainer } from "../Tracks/motion";
 import styles from "../Tracks/style";
 
 const Statement = () => {
-  const TitleText = ({ title, textStyles }) => (
-    <motion.h2
-      variants={textVariant2}
-      initial="hidden"
-      whileInView="show"
-      className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
-    >
-      {title}
-    </motion.h2>
-  );
+  // const TitleText = ({ title, textStyles }) => (
+  //   <motion.h2
+  //     variants={textVariant2}
+  //     initial="hidden"
+  //     whileInView="show"
+  //     className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+  //   >
+  //     {title}
+  //   </motion.h2>
+  // );
   
 
   let articles=[
@@ -199,8 +199,8 @@ let SearchType=[
 
   return (
     <div className="container mx-auto my-8">
-        <TitleText
-          title={
+       {/* title= */}
+       {
             <>
       
               <div className="container mx-auto px-4 flex justify-center ">
@@ -212,8 +212,10 @@ let SearchType=[
               
             </>
           }
+        {/* <TitleText
+         
           textStyles="text-center"
-        />
+        /> */}
       <form>
         <div className="m-3 py-2 px-5 d-flex justify-center ">
           

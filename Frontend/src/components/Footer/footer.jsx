@@ -1,5 +1,5 @@
-"use client";
-import { textContainer, textVariant2 } from "../Tracks/motion";
+// "use client";
+// import { textContainer, textVariant2 } from "../Tracks/motion";
 import React from "react";
 import './footer.css';
 import { useForm } from "@formspree/react";
@@ -12,22 +12,22 @@ import {
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import { TitleText } from "../Tracks/CustomTexts";
+// import { TitleText } from "../Tracks/CustomTexts";
 import { staggerContainer } from "../Tracks/motion";
 import styles from "../Tracks/style";
 // import { logo } from "../../assets/images";
 
 export default function Footer() {
-  const TitleText = ({ title, textStyles }) => (
-    <motion.h2
-      variants={textVariant2}
-      initial="hidden"
-      whileInView="show"
-      className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
-    >
-      {title}
-    </motion.h2>
-  );
+  // const TitleText = ({ title, textStyles }) => (
+  //   <motion.h2
+  //     variants={textVariant2}
+  //     initial="hidden"
+  //     whileInView="show"
+  //     className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+  //   >
+  //     {title}
+  //   </motion.h2>
+  // );
   const BottomFooter = () => {
     return (
       <React.Fragment>
@@ -190,16 +190,18 @@ export default function Footer() {
                   viewport={{ once: false, amount: 0.25 }}
                   className={`${styles.innerWidth} mx-auto flex flex-col`}
                 >
-                  <TitleText
-                    title={
+                  {/* title= */}
+                  {
                       <>
                         <h2 className="text-4xl lg:text-7xl font-bold text-[#8471ae] my-4 lg:my-6 font-[Oswald] ">
                           Lets talk about everything!
                         </h2>
                       </>
                     }
+                  {/* <TitleText
+                    
                     textStyles="text-center"
-                  />
+                  /> */}
                 </motion.div>
                 <div className="mt-8 text-gray-300">
                   Contact us through email at{" "}
@@ -251,16 +253,17 @@ export default function Footer() {
             viewport={{ once: false, amount: 0.25 }}
             className={`${styles.innerWidth} mx-auto flex flex-col`}
           >
-            <TitleText
-              title={
+            title={
                 <>
                   <span className="text-4xl lg:text-6xl font-bold text-[#def200] my-4 lg:my-6 font-[Oswald] ">
                     Lets talk about everything!
                   </span>
                 </>
               }
+            {/* <TitleText
+              
               textStyles="text-center"
-            />
+            /> */}
           </motion.div>
         </div>
         <div className="flex flex-col items-center justify-center m-4 mt-10 md:mt-4 lg:flex-row lg:space-x-44">
