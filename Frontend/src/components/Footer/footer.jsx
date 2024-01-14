@@ -1,3 +1,5 @@
+"use client";
+import { textContainer, textVariant2 } from "../Tracks/motion";
 import React from "react";
 import './footer.css';
 import { useForm } from "@formspree/react";
@@ -16,6 +18,16 @@ import styles from "../Tracks/style";
 // import { logo } from "../../assets/images";
 
 export default function Footer() {
+  const TitleText = ({ title, textStyles }) => (
+    <motion.h2
+      variants={textVariant2}
+      initial="hidden"
+      whileInView="show"
+      className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+    >
+      {title}
+    </motion.h2>
+  );
   const BottomFooter = () => {
     return (
       <React.Fragment>

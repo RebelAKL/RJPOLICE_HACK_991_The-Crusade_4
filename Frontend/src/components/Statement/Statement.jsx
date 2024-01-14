@@ -1,5 +1,9 @@
+"use client";
+
+// import { motion } from "framer-motion";
+import { textContainer, textVariant2 } from "../Tracks/motion";
 import React, { Component } from "react";
-import { TitleText } from "../Tracks/CustomTexts";
+// import { TitleText } from "../Tracks/CustomTexts";
 import "./style.css";
 import { motion } from "framer-motion";
 import { SearchDetails } from './SearchDetails';
@@ -8,6 +12,18 @@ import { staggerContainer } from "../Tracks/motion";
 import styles from "../Tracks/style";
 
 const Statement = () => {
+  const TitleText = ({ title, textStyles }) => (
+    <motion.h2
+      variants={textVariant2}
+      initial="hidden"
+      whileInView="show"
+      className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+    >
+      {title}
+    </motion.h2>
+  );
+  
+
   let articles=[
     {
       "source": {
@@ -140,8 +156,8 @@ let SearchType=[
 
   const ImageSearch =()=> {
     return(
-      <div class="mb-3">
-        <label for="formFile" className="form-label text-slate-500 flex justify-center ">Upload the png,jpg or jpeg formate file</label>
+      <div className="mb-3">
+        <label htmlFor="formFile" className="form-label text-slate-500 flex justify-center ">Upload the png,jpg or jpeg formate file</label>
         <input className="form-control" type="file" id="formFile"/>
     </div>
     )
