@@ -1,7 +1,7 @@
  import React from "react";
 import "./hero.css";
 import {leftElement} from "../../assets/images";
-import {rightElement } from "../../assets/images";
+// import {rightElement } from "../../assets/images";
 
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
 
         {/* right */}
         <div className="hidden my-4 mx-4 md:block absolute top-0 right-0 h-full w-1/4 ">
-          <img src={rightElement} />
+          {/* <img src={rightElement} /> */}
         </div>
       </div>
     </>
