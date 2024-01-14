@@ -25,7 +25,7 @@ const Tabs = ({ activeTab, onTabClick }) => {
             >
               {tab}
             </div>
-            <div className="text-white"></div>
+            {/* <div className="text-white"></div> */}
           </div>
         </React.Fragment>
       ))}

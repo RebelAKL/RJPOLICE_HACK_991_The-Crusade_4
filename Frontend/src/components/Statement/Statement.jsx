@@ -11,77 +11,95 @@ const Statement = () => {
   let articles=[
     {
       "source": {
+          "id":"1",
           "name": "State"
           },
+          "key":"1",
           "PoliceStation": "Police Station(optional)",
           
           },
     {
     "source": {
+      "id":"2",
         "name": "Andhra Pradesh"
         },
+        "key":"2",
         "PoliceStation": "lorem",
         
         },
     {
     "source": {
+      "id":"3",
         "name": "Arunachal Pradesh	"
         },
-        "PoliceStation": "lorem",
+        "key":"3",
+        "PoliceStation": "lodfasrem",
         },
     {
     "source": {
-  
+      "id":"4",
         "name": "Assam"
         },
-        "PoliceStation": "lorem",
+        "key":"4",
+        "PoliceStation": "loadfrem",
         
         },
     {
     "source": {
+      "id":"5",
         "name": "Bihar"
         },
-        "PoliceStation": "lorem",
+        "key":"5",
+        "PoliceStation": "loghrem",
         
         },
     {
     "source": {
+      "id":"6",
         "name": "Chhattisgarh"
         },
-        "PoliceStation": "lorem",
+        "key":"6",
+        "PoliceStation": "lorejtm",
 
         },
     {
     "source": {
+      "id":"7",
         "name": "Goa"
         },
-        "PoliceStation": "lorem",
+        "key":"7",
+        "PoliceStation": "loryjem",
         
         },
     {
     "source": {
+      "id":"8",
         "name": "Gujarat"
         },
-        "PoliceStation": "lorem",
+        "key":"8",
+        "PoliceStation": "loukfrem",
       },
     
     {
     "source": {
+      "id":"9",
         "name": "Haryana"
         },
-        "PoliceStation": "lorem",
+        "key":"9",
+        "PoliceStation": "lomyrem",
         }
         ]
-    let SelectState = articles.map((elements) =>
-      <option key={elements.source.name}>{elements.source.name}</option>
+    let SelectState = articles.map((element) =>
+      <option key={element.source.id}>{element.source.name}</option>
   );
   let SelectPoliceStation = articles.map((elements) =>
-  <option key={elements.PoliceStation}>{elements.PoliceStation}</option>
+  <option key={elements.key}>{elements.PoliceStation}</option>
 );
 
 let SearchType=[
   {
     "source": {
+      "value":"Name",
         "name": "Search Type"
         },
         "PoliceStation": "Police Station(optional)",
@@ -89,6 +107,7 @@ let SearchType=[
         },
   {
   "source": {
+    "value":"Id",
       "name": "Text Search"
       },
       "PoliceStation": "lorem",
@@ -96,20 +115,22 @@ let SearchType=[
       },
   {
   "source": {
+    "value":"Both",
       "name": "Image Search"
       },
       "PoliceStation": "lorem",
       },
   {
   "source": {
+    "value":"None",
         "name": "Voice Search"
         }, 
         "PoliceStation": "lorem",
         },
   
       ]
-  const Search = SearchType.map((elements) =>
-    <option key={elements.source.name}>{elements.source.name}</option>
+  const Search = SearchType.map((type) =>
+    <option key={type.source.value}>{type.source.name}</option>
     );
 
   const [selected, setSelected] = React.useState(""); 

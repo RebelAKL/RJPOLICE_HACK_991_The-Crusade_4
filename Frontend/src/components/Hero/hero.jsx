@@ -1,6 +1,7 @@
  import React from "react";
 import "./hero.css";
-import { leftElement, rightElement } from "../../assets/images";
+import {leftElement} from "../../assets/images";
+import {rightElement } from "../../assets/images";
 
 
 const Hero = () => {
