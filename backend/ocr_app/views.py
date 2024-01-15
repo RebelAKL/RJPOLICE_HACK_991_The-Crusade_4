@@ -7,8 +7,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .serializers import *
+
 # from ...OCR.ocr import OCR
 # Create your views here.
+
 
 class FileUploadView(generics.CreateAPIView):
     serializer_class = UserUploadedFileSerializer
@@ -19,13 +21,14 @@ class FileUploadView(generics.CreateAPIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response({"error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-    
+        return Response(
+            {"error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST
+        )
+
 
 class UserUploadedFileView(APIView):
     def get(self, request, *args, **kwargs):
         """
         import ocr and use image directly by calling it's path stored in database.
-        """   
-    
-
+        """
+        pass
