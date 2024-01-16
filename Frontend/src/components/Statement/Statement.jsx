@@ -2,7 +2,7 @@
 
 // import { motion } from "framer-motion";
 // import { textContainer, textVariant2 } from "../Tracks/motion";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 // import { TitleText } from "../Tracks/CustomTexts";
 import "./style.css";
 import { motion } from "framer-motion";
@@ -10,6 +10,7 @@ import { SearchDetails } from './SearchDetails';
 import Design_copmponent from '../design_componet/opacity';
 import { staggerContainer } from "../Tracks/motion";
 import styles from "../Tracks/style";
+import axios from "axios";
 
 const Statement = () => {
   // const TitleText = ({ title, textStyles }) => (
@@ -154,11 +155,31 @@ let SearchType=[
     setSelected(event.target.value); 
   }; 
 
+  
+
+
+
   const ImageSearch =()=> {
+      const [image, setImage]= useState(' ');
+      function handleImage(e){
+        console.log(e.target.files);
+        setImage(e.target.files[0]);
+      }
+      function handleApi(){
+        const imageData= new ImageData()
+        imageData.append('image',image);
+        axios.post('http://127.0.0.1:8000/api/ocr/upload/',imageData).then((res)=>{
+          console.log(res);
+        })
+      }
+    
     return(
-      <div className="mb-3">
+      <div className="mb-3 flex flex-col justify-center">
         <label htmlFor="formFile" className="form-label text-slate-500 flex justify-center ">Upload the png,jpg or jpeg formate file</label>
-        <input className="form-control" type="file" id="formFile"/>
+        <input className="form-control" type="file" name="file" onChange={handleImage} id="formFile"/>
+        <button type="submit" className="btn btn-success m-2 " onClick={handleApi}>
+          Upload Image
+        </button>
     </div>
     )
   }
@@ -231,7 +252,7 @@ let SearchType=[
           {SelectPoliceStation}
           </select>
           
-          <button type="submit" className="btn btn-primary ">
+          <button type="submit" className="btn btn-primary " >
           Process
         </button>
         </div>
