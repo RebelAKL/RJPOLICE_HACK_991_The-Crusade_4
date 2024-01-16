@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .serializers import *
+from django.conf import settings
 
 # from ...OCR.ocr import OCR
 # Create your views here.
@@ -26,9 +27,15 @@ class FileUploadView(generics.CreateAPIView):
         )
 
 
-class UserUploadedFileView(APIView):
+class UserUploadedFileView(generics.RetrieveAPIView):
+    serializer_class = UserUploadedFileSerializer
+    renderer_classes = [renderers.JSONRenderer]
+
     def get(self, request, *args, **kwargs):
-        """
-        import ocr and use image directly by calling it's path stored in database.
-        """
-        pass
+        user_uploaded_file = UserUploadedFile.objects.latest("id")
+        relative_file_url = str(user_uploaded_file.file)
+        base_url = str(settings.BASE_DIR)
+        absolute_url = base_url+"/"+relative_file_url
+        print(absolute_url)
+
+        return Response({"url":absolute_url})

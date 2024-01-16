@@ -47,8 +47,11 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "ocr_app",
+<<<<<<< HEAD
     "rest_framework",
     
+=======
+>>>>>>> 70fd3d7d1264c603f98bcbf37a44a4555925d674
 ]
 
 CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
