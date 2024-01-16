@@ -1,4 +1,5 @@
-from ocr import OCR
+from .ocr import OCR
+import translation
 import cv2
 import numpy as np
 import torch

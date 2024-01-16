@@ -4,7 +4,7 @@ import cv2
 import os
 import numpy as np
 import glob
-from translation import Translator
+from .translation import Translator
 
 class OCR:
     def __init__(self, lang:str, gpu:bool=True):
@@ -63,5 +63,5 @@ if __name__ == '__main__':
     img = ocr.read_img(img_path)
     text, trans_text = ocr.get_text(img, detail=0, tgt='en', to_be_translated=True)
     print(trans_text)
-    with open('OCR_/ocr_out.txt', 'w') as f:
-        f.write(text)
+    # with open('OCR_/ocr_out.txt', 'w') as f:
+    #     f.write(text)
