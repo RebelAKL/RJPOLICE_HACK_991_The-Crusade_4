@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Ananay Kaushal",
+      "image": "src/assets/images/ananay.jpg",
+      "desc": "ML Developer",
+      "insta": "https://www.instagram.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/"
+    },
+    {
+      "name": "Chaitanya Kohli",
+      "image": "src/assets/images/Chaitanya.jpg",
+      "desc": "ML Developer ",
+      "insta": "https://www.instagram.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/"
+    },    
+    {
+      "name": "Arun Kushwaha",
+      "image": "src/assets/images/arun.jpg",
+      "desc": "Frontend Developer ",
+      "insta": "https://www.instagram.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/"
+    },
+    {
+      "name": "Vishesh Garg",
+      "image": "src/assets/images/vishesh.jpg",
+      "desc": "Backend Developer",
+      "insta": "https://www.instagram.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/"
+    }
+  ]
