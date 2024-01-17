@@ -166,17 +166,21 @@ let SearchType=[
 
 
   const ImageSearch =()=> {
-      const [image, setImage]= useState(' ');
+      const [file, setFile]= useState(' ');
       function handleImage(e){
         console.log(e.target.files);
-        setImage(e.target.files[0]);
+        setFile(e.target.files[0]);
       }
       function handleApi(){
-        const imageData= new ImageData()
-        imageData.append('image',image);
-        axios.post('http://127.0.0.1:8000/api/ocr/upload/',imageData).then((res)=>{
-          console.log(res);
+        const formData = new FormData();
+        formData.append('file', file);
+        axios.post('http://127.0.0.1:8000/api/ocr/upload/',formData)
+        .then((res)=>{
+          console.log('Request successful');
         })
+        .catch((error) => {
+          console.error('Error uploading image:', error);
+        });
       }
     
     return(
