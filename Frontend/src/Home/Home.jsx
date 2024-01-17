@@ -14,6 +14,7 @@ import Details from "../components/Details/Details";
 import Carousel from "../components/carousel/carousel";
 import Navbar from "../components/Navbar/Navbar";
 import Statement from "../components/Statement/Statement";
+import ImageSearch from "../components/Statement/ImageSearch";
 
 function Home() {
 
@@ -55,6 +56,7 @@ function Home() {
           <Statement/>
           {/* <Carousel /> */}
           {/* <Fir /> */}
+          <ImageSearch/>
           <Details />
           {/* <Procedure /> */}
           <Carousel />
