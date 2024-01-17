@@ -1,10 +1,25 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 
 
 function FormDetails() {
+
+  // const [form, setForm]= useState(' ');
+  //     function handleForm(e){
+  //       console.log(e.target.files);
+  //       setImage(e.target.files[0]);
+  //     }
+  //     function handleformApi(){
+  //       const FormData= new ImageData()
+  //       // FormData.append('image',image);
+  //       // axios.post('http://127.0.0.1:8000/api/ocr/upload/',imageData).then((res)=>{
+  //       //   console.log(res);
+  //       // })
+  //     }
+
   return (
     <div>
-         <form className="needs-validation form-row " novalidate>
+         <form className="needs-validation form-row " noValidate>
   <div className="form-row flex">
     <div className="col-md-4 mb-3 mx-1">
       <label htmlFor="validationCustom01">User name</label>

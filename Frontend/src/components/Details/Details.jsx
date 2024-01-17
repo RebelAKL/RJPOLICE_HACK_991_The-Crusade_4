@@ -11,20 +11,20 @@ import FormDetails from './FormDetails';
 import axios from 'axios';
 
 function Details() {
-  const [showDetails, SetDetails]= useState();
-  useEffect(()=>{
-    async function Details(){
-      try{
-        const showDetails = await axios.get('http://127.0.0.1:8000/api/ocr/upload/');// this api address is for uploading image
-        console.log(showDetails.data);
-        SetDetails(showDetails.data);
+  // const [showDetails, SetDetails]= useState();
+  // useEffect(()=>{
+  //   async function Details(){
+  //     try{
+  //       const showDetails = await axios.get('http://127.0.0.1:8000/api/ocr/upload/');// this api address is for uploading image
+  //       console.log(showDetails.data);
+  //       SetDetails(showDetails.data);
 
-      }catch(error){
-        console.log("error");
-      }
-    }
-    Details();
-  },[])
+  //     }catch(error){
+  //       console.log("error");
+  //     }
+  //   }
+  //   Details();
+  // },[])
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (index) => {

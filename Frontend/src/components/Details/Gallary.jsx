@@ -3,9 +3,25 @@ import React from 'react';
 import { tabData } from './Tabs_Data';
 import { thumb} from '../../assets/images';
 import Design_copmponent from '../design_componet/opacity';
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 
 const Gallery = ({ activeTab }) => {
   const filteredData = tabData[activeTab] || [];
+  const [showDetails, SetDetails]= useState();
+  useEffect(()=>{
+    async function Details(){
+      try{
+        const showDetails = await axios.get('http://127.0.0.1:8000/api/ocr/upload/');// this api address is for uploading image
+        // console.log(showDetails.data);
+        // SetDetails(showDetails.data);
+
+      }catch(error){
+        // console.log("error");
+      }
+    }
+    Details();
+  },[])
 
   return (
     <div className="container w-full h-full mt-12 mb-12">
