@@ -16,7 +16,7 @@ import crusadelogo from "../assets/images/logo-color.png"
 import policeman from "../assets/images/policeman.png"
 import thumb from "../assets/images/thumbprint.png"
 import leftElement from "../assets/images/leftElement.png"
-// import rightElement from "../assets/images/rightElement.png"
+import rightElement from "../assets/images/rightElement.png"
 import arun from "../assets/images/arun.jpg"
 import chaitanya from "../assets/images/Chaitanya.jpg"
 import ananay from "../assets/images/ananay.jpg"
@@ -36,7 +36,7 @@ export {
   policeman,
   thumb,
   leftElement,
-  // rightElement,
+  rightElement,
   crusadelogo,
   people,
   result,

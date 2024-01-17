@@ -4,7 +4,7 @@ import cv2
 import os
 import numpy as np
 import glob
-from translation import Translator
+from .translation import Translator
 
 class OCR:
     def __init__(self, lang:str, gpu:bool=True):
@@ -58,10 +58,10 @@ class OCR:
 if __name__ == '__main__':
     import random
     ocr = OCR('hi', False)
-    img_path = random.choice(glob.glob('OCR/data/fir_images_from_web/*.png'))
+    img_path = random.choice(glob.glob('data/fir_images_from_web/*.png'))
     print(img_path.split('/')[-1])   
     img = ocr.read_img(img_path)
     text, trans_text = ocr.get_text(img, detail=0, tgt='en', to_be_translated=True)
     print(trans_text)
-    with open('OCR_/ocr_out.txt', 'w') as f:
-        f.write(text)
+    # with open('OCR_/ocr_out.txt', 'w') as f:
+    #     f.write(text)
