@@ -1,5 +1,5 @@
 from .ocr import OCR
-import translation
+from .translation import Translator
 import cv2
 import numpy as np
 import torch

@@ -53,3 +53,11 @@ class UserUploadedFileView(generics.RetrieveAPIView):
             )
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+        
+
+class ResultView(generics.RetrieveAPIView):
+    serializer_class = ResultSerializer
+    renderer_classes = [renderers.JSONRenderer]
+
+    def get(self, request, *args, **kwargs):
+        pass
