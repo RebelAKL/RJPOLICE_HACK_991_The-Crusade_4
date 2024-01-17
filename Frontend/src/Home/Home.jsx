@@ -15,6 +15,9 @@ import Carousel from "../components/carousel/carousel";
 import Navbar from "../components/Navbar/Navbar";
 import Statement from "../components/Statement/Statement";
 import ImageSearch from "../components/Statement/ImageSearch";
+import Voicesearch from "../components/Statement/Voicesearch";
+import DefaultHome from "../components/HomeComponents/DefaultHome";
+// import DefaultHome from "../DefaultHome";
 
 function Home() {
 
@@ -42,10 +45,12 @@ function Home() {
     <>
       <div className="relative z-0 bg-primary">
         <div
-          className="bg-black bg-cover 
+          className="  mainbody bg-cover 
       bg-no-repeat bg-center"
         >
-          <Navbar />
+          
+          <DefaultHome/>
+          {/* <Navbar />
 
           <div className="relative z-0">
             <Hero />
@@ -54,18 +59,22 @@ function Home() {
           <AboutSection />
           <Carousel />
           <Statement/>
-          {/* <Carousel /> */}
-          {/* <Fir /> */}
-          <ImageSearch/>
-          <Details />
-          {/* <Procedure /> */}
           <Carousel />
-          {/* <Challenges /> */}
-          {/* <Police_team /> */}
+          <Fir />
+          <ImageSearch/>
+          <div className="container flex justify-center text-white ">
+
+          <Voicesearch/>
+          </div>
+          <Details />
+          <Procedure />
+          <Carousel />
+          <Challenges />
+          <Police_team />
 
           <TeamMembers />
           <Faqs />
-          <Footer />
+          <Footer /> */}
         </div>
       </div>
     </>

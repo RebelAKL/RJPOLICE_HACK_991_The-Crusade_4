@@ -18,7 +18,7 @@ const Hero = () => {
       <h1 className="head">Analysis of FIR using AI/ML for proper Act and Section</h1>
         <h1 className="head2">THE CRUSADE </h1>
         <p className="text-lg text-gray-600">
-        Lorem, ipsum dolor sit amet consectetur adipisicing <br/>elit. Distinctio perferendis delectus soluta facere vero possimus
+        Welcome to The Crusade, a team dedicated to revolutionizing legal <br/> processes with innovative solutions.
         </p>
 
       </div>
