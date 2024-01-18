@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1W1pIwV6zCW9NIz4d8bqPWtTzfMdiG2G3
 """
 
-!pip install -q accelerate==0.21.0 peft==0.4.0 bitsandbytes==0.40.2 transformers==4.31.0 trl==0.4.7 sentencepiece
+# !pip install -q accelerate==0.21.0 peft==0.4.0 bitsandbytes==0.40.2 transformers==4.31.0 trl==0.4.7 sentencepiece
 
 import torch
 from huggingface_hub import notebook_login

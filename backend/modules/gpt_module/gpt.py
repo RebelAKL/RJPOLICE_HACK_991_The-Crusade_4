@@ -1,12 +1,17 @@
 import openai
-from config import *
 
-openai.api_key = OPEN_API_KEY
+from dotenv import load_dotenv
+import os
+
+# from config import *
+load_dotenv()
+
+openai.api_key = os.getenv('OPEN_API_KEY')
 
 # N_RETRIES = 3
 
 # @retry(stop=stop_after_attempt(N_RETRIES), wait=wait_exponential(multiplier=1, min=4, max=70))
-def generate_example(prompt:str, temperature:float=.5):
+def generate_fir(prompt:str, temperature:float=.5):
     messages=[
         {
             "role": "system",

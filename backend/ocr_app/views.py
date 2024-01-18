@@ -10,6 +10,7 @@ from .serializers import *
 from django.conf import settings
 
 from modules.ocr_module.ocr import OCR
+from modules.gpt_module.gpt import generate_fir
 # Create your views here.
 
 
@@ -37,27 +38,45 @@ class UserUploadedFileView(generics.RetrieveAPIView):
         base_url = str(settings.BASE_DIR)
         absolute_url = base_url+"/"+relative_file_url
 
-        try:
             # ocr implimentation
-            ocr = OCR('hi', False) # false cause high gpu usage
-            image_path = absolute_url
-            img = ocr.read_img(image_path)
-            text, translated_text = ocr.get_text(img, to_be_translated=True, tgt='en')
-            translated_text_str = " ".join(translated_text)
+        ocr = OCR('hi', False) # false cause high gpu usage
+        image_path = absolute_url
+        img = ocr.read_img(image_path)
+        text = ocr.get_text(img, to_be_translated=False, tgt='en')
+        text_str = " ".join(text)
 
-            return Response(
+        print({
+                "fir_text_original": text_str,
+                # "fir_text_translated": translated_text_str
+            })
+
+        """gpt implimentation"""
+        prompt = text_str
+        result = generate_fir(prompt)
+        print(result)
+
+        return Response(
                 {
-                    "fir_text_original": text,
-                    "fir_text_translated": translated_text_str
-                }, status=status.HTTP_200_OK
+                    "fir_text_original": text_str,
+                    # "fir_text_translated": translated_text_str,
+                    "fir": result
+                },
+                status=status.HTTP_200_OK
             )
-        except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+
+        #     return Response(
+        #         {
+        #             "fir_text_original": text,
+        #             "fir_text_translated": translated_text_str
+        #         }, status=status.HTTP_200_OK
+        #     )
+        # except:
+        #     return Response(status=status.HTTP_400_BAD_REQUEST)
         
 
-class ResultView(generics.RetrieveAPIView):
-    serializer_class = ResultSerializer
-    renderer_classes = [renderers.JSONRenderer]
+# class ResultView(generics.RetrieveAPIView):
+#     serializer_class = ResultSerializer
+#     renderer_classes = [renderers.JSONRenderer]
 
-    def get(self, request, *args, **kwargs):
-        pass
+#     def get(self, request, *args, **kwargs):
+#         pass
