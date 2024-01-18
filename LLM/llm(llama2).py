@@ -66,5 +66,3 @@ prompt = rand.choice(data['Offense'])
 prompt
 
 generate_response(format_prompt('what is the length of string input we can give as prompt to you?', ''))
-
-import requests
