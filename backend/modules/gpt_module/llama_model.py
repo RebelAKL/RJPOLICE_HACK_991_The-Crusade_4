@@ -1,4 +1,4 @@
-from config import *
+from backend.modules.ocr_module.config import *
 from transformers import GenerationConfig, LlamaForCasualGeneration, LlamaTokenizer
 import torch
 
@@ -22,7 +22,7 @@ class LlamaModel:
     {prompt}
     """.strip()
 
-    def generate_response(self, prompt: str, max_new_tokens: int = 128) -> str:
+    def generate_response(self, prompt: str, max_new_tokens: int = 128) -> str: 
         encoding = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
         with torch.inference_mode(): 
             outputs = self.model.generate(
