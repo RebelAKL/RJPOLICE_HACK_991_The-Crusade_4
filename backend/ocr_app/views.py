@@ -57,9 +57,7 @@ class UserUploadedFileView(generics.RetrieveAPIView):
 
         return Response(
                 {
-                    "fir_text_original": text_str,
-                    # "fir_text_translated": translated_text_str,
-                    "fir": result
+                    result
                 },
                 status=status.HTTP_200_OK
             )

@@ -6,6 +6,7 @@ import Design_copmponent from '../design_componet/opacity';
 import axios from 'axios';
 import { useState,useEffect } from 'react';
 // import {Fir} from './content.json'
+import './style.css';
 
 const Gallery = ({ activeTab }) => {
   
@@ -16,6 +17,7 @@ const Gallery = ({ activeTab }) => {
         const showDetails = await axios.get("http://127.0.0.1:8000/api/ocr/file/");
         console.log(showDetails.data);
         SetDetails(showDetails.data);
+        document.write('<p id="jstext">'+ showDetails.data +'</p>');
 
       }catch(error){
         console.log("error");
@@ -31,6 +33,8 @@ const Gallery = ({ activeTab }) => {
     <div className="container w-full h-full mt-12 mb-12">
       {filteredData.map((data, index) => (
         <div key={index} className="mb-4 sm:mb-0 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          {/* <div>document.write(showDetails.data);</div> */}
           {/* 1st div - Content */}
           <div className="flex flex-rows p-3">
             <img
@@ -69,7 +73,7 @@ const Gallery = ({ activeTab }) => {
             
           </div>
           {/* 3rd div - Image */}
-          <div className='flex justify-center items-center '>
+          {/* <div className='flex justify-center items-center '> */}
           {/* <p className="text-white">{data.Fir.FIR['FIR No.']}</p> */}
             {/* <img
               src={data.img2}
@@ -77,7 +81,7 @@ const Gallery = ({ activeTab }) => {
               className=" object-contain"
               style={{ maxWidth: '100%', maxHeight: '100%' }}
             /> */}
-          </div>
+          {/* </div> */}
           {/* 4th div - Text */}
           <div className="py-4 mt-4 text-white">
           <Design_copmponent/>
