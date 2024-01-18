@@ -31,6 +31,27 @@ import details2 from "../assets/images/details2.png"
 import punishment1 from "../assets/images/punishment1.png"
 import punishment2 from "../assets/images/punishment2.png"
 
+import CM from "../assets/images/cm.png"
+import youtube from "../assets/images/youtube.png"
+import indianlion from "../assets/images/indianlion.png"
+import policelogo from "../assets/images/policelogo.png"
+import facebook from "../assets/images/facebook.png"
+import numb from "../assets/images/numb.png"
+import insta from "../assets/images/insta.png"
+import twitter from "../assets/images/twitter.png"
+import defaultbg from "../assets/images/defaultbg.png"
+
+
+
+import audit from "../assets/images/audit.png"
+import customer from "../assets/images/customer_service.png"
+import Home from "../assets/images/Home_button.png"
+import newtab from "../assets/images/newtab.png"
+import security from "../assets/images/security.png"
+import user from "../assets/images/user.png"
+
+
+
 
 export {
   policeman,
@@ -63,4 +84,19 @@ export {
   court2,
   section1,
   section2,
+  youtube,
+  CM,
+  indianlion,
+  policelogo,
+  facebook,
+  numb,
+  insta,
+  twitter,
+  defaultbg,
+  audit,
+  security,
+  user,
+  customer,
+  Home,
+  newtab,
 };

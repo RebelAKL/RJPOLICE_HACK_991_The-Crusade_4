@@ -1,8 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import "./style.css";
 
 const ImageSearch =()=> {
+    const [show, setShow]= useState(false);
+
+
+
     const [file, setFile]= useState(' ');
     function handleImage(e){
       console.log(e.target.files);
@@ -21,12 +26,21 @@ const ImageSearch =()=> {
     }
   
   return(
-    <div className="mb-3 flex flex-col justify-center">
+    <div className=" container flex flex-col justify-center">
+    <button type="button" className="btn btn-outline-light buttonShow" onClick={()=>setShow(!show)}>
+Upload Image
+</button>
+{show  &&
+    
+    <div className="container w-50  mb-3 flex flex-col justify-center position-relative">
+      
       <label htmlFor="formFile" className="form-label text-slate-500 flex justify-center ">Upload the png,jpg or jpeg formate file</label>
       <input className="form-control" type="file" name="file" onChange={handleImage} id="formFile"/>
       <button type="submit" className="btn btn-success m-2 " onClick={handleApi}>
         Upload Image
       </button>
+    
+  </div>}
   </div>
   )
 }

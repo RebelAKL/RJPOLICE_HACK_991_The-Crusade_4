@@ -203,41 +203,41 @@ let SearchType=[
     )
   }
 
-  const VoiceSearch =()=> {
-    // const startListening =()=>{
-    //   SpeechRecognition.startListening({continuous: true,language:'en-IN , hi-IN'});
+  // const VoiceSearch =()=> {
+  //   // const startListening =()=>{
+  //   //   SpeechRecognition.startListening({continuous: true,language:'en-IN , hi-IN'});
 
-    // }
+  //   // }
       
 
-    // const { transcript, listening,resetTranscript,browserSupportsSpeechRecognition } = useSpeechRecognition();
+  //   // const { transcript, listening,resetTranscript,browserSupportsSpeechRecognition } = useSpeechRecognition();
 
-    // if (!browserSupportsSpeechRecognition) {
-    //   return <span>Browser do not support</span>
-    // }
+  //   // if (!browserSupportsSpeechRecognition) {
+  //   //   return <span>Browser do not support</span>
+  //   // }
 
-    return(
-      <>
-      {/* <div className="container">
-        <h2>Tap to Speak</h2>
-        <p><i class="fa fa-microphone">Microphone:{listening ?'on':'off'}</i></p>
-        <div className="main-content">
-        <p>{transcript}</p>
-        </div>
+  //   return(
+  //     <>
+  //     {/* <div className="container">
+  //       <h2>Tap to Speak</h2>
+  //       <p><i class="fa fa-microphone">Microphone:{listening ?'on':'off'}</i></p>
+  //       <div className="main-content">
+  //       <p>{transcript}</p>
+  //       </div>
         
-        <div className="btn-style">
-          <button onClick={startListening}>Start Listening</button>
-          <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
-          <button onClick={resetTranscript}>Reset</button>
-          <button>Copy</button>
-        </div>
+  //       <div className="btn-style">
+  //         <button onClick={startListening}>Start Listening</button>
+  //         <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
+  //         <button onClick={resetTranscript}>Reset</button>
+  //         <button>Copy</button>
+  //       </div>
         
-      </div> */}
+  //     </div> */}
 
-      {/* <Voicesearch/> */}
-      </>
-    )
-  }
+  //     {/* <Voicesearch/> */}
+  //     </>
+  //   )
+  // }
 
   const SearchInfo=()=>{
   if (selected === "Text Search") { 
@@ -253,7 +253,8 @@ let SearchType=[
   // }
    else if (selected === "Voice Search") { 
     return(
-      VoiceSearch()
+      console.log('speak')
+      // VoiceSearch()
 
     )
   } 
@@ -282,9 +283,14 @@ let SearchType=[
       <form>
         <div className="m-3 py-2 px-5 d-flex justify-center ">
           
-          <select onChange={changeSelectOptionHandler} className="form-select mx-1" aria-label="Default select example"> 
+          {/* <select onChange={changeSelectOptionHandler} className="form-select mx-1" aria-label="Default select example"> 
           {Search}
-          </select> 
+          </select>  */}
+          <input placeholder="Statement/Scenario"
+            type="text"
+            className="form-control mx-1"
+            id="Statment"
+          />
           <select className="form-select" aria-label="Default select example">
           {SelectState}
           </select>
