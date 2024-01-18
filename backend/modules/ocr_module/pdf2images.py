@@ -38,8 +38,10 @@ class pdf2images:
         return pdf_images
 
 if __name__ == "__main__":
-    os.chdir('OCR_')
+    # os.chdir('OCR_')
     # os.mkdir('data/fir_pdfs/extracted_images')
-    pdf_paths = glob.glob('data/fir_pdfs/*.pdf')
+    pdf_paths = glob.glob(r"modules\ocr_module\data\fir_pdfs\*.pdf")
+    print(pdf_paths)
+    # pdf_paths = r"C:\\Users\\vishe\\Vishesh\\RJPOLICE_HACK_991_The-Crusade_4\backend\\modules\\ocr_module\data\\fir_pdfs\\0_0.pdf"
     pdf2images = pdf2images()
     pdf2images.pdfs_to_images(pdf_paths, output_folder='data/fir_pdfs/extracted_images', save_images_locally=True)

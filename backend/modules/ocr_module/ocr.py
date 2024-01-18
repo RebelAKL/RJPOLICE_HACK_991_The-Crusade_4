@@ -52,8 +52,9 @@ class OCR:
 
         if to_be_translated:
             trans_text = [txt[0] for txt in [self.translator.translate(txt, self.lang_codes[self.lang], self.lang_codes[tgt]) for txt in text]]
+            return text, trans_text
 
-        return text, trans_text
+        return text
 
 if __name__ == '__main__':
     import random
